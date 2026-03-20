@@ -1,0 +1,33 @@
+
+<h3> of()</h3>
+<ul>
+    @for(val of values ; track val)
+     {
+        <li>{{val}}</li>
+     }
+    
+</ul>
+<!--<p>{{emittedValue}}</p> -->
+
+<h3> from()</h3>
+<ul>
+    @for(fruit of fruits;track fruit)
+    {
+        <li>{{fruit}}</li>
+    }
+</ul>
+<h3>Interval Values</h3>
+<ul>
+  @for (val of intervalvalues; track $index) {
+    <li>{{ val }}</li>
+  }
+</ul>
+<h3>timer()</h3>
+<ul>
+    @for(val of timervalues; track $index  ){
+        <li>{{val}}</li>
+    }
+</ul>
+
+
+   
