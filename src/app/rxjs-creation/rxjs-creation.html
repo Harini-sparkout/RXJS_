@@ -5,8 +5,14 @@
      {
         <li>{{val}}</li>
      }
-    
+     
 </ul>
+<h3>Birds:</h3>
+    @for(val of values ; track val)
+    {
+<li>{{ val }}</li>
+    }
+  
 <!--<p>{{emittedValue}}</p> -->
 
 <h3> from()</h3>
@@ -30,4 +36,6 @@
 </ul>
 
 
+<h3>fromEvent</h3>
+<button #btn>click </button>
    
