@@ -54,7 +54,9 @@ ngOnInit(): void {
     complete: () => console.log('interval completed')
   })
 );
-const timer$ =timer(2000,1000).pipe(take(5));
+
+
+const timer$ =timer(1000);
 this.subscriptions.push(
   timer$.subscribe({
     next: val => {
