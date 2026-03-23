@@ -1,41 +1,59 @@
-
 <h3> of()</h3>
 <ul>
-    @for(val of values ; track val)
-     {
-        <li>{{val}}</li>
-     }
-     
+  @for (val of values; track val) {
+    <li>{{ val }}</li>
+  }
 </ul>
-<h3>Birds:</h3>
-    @for(val of values ; track val)
-    {
-<li>{{ val }}</li>
-    }
-  
-<!--<p>{{emittedValue}}</p> -->
 
 <h3> from()</h3>
 <ul>
-    @for(fruit of fruits;track fruit)
-    {
-        <li>{{fruit}}</li>
-    }
+  @for (fruit of fruits; track fruit) {
+    <li>{{ fruit }}</li>
+  }
 </ul>
-<h3>Interval Values</h3>
+
+<h3> Interval Values</h3>
 <ul>
   @for (val of intervalvalues; track $index) {
     <li>{{ val }}</li>
   }
 </ul>
-<h3>timer()</h3>
+
+<h3> timer()</h3>
 <ul>
-    @for(val of timervalues; track $index  ){
-        <li>{{val}}</li>
-    }
+  @for (val of timervalues; track $index) {
+    <li>{{ val }}</li>
+  }
 </ul>
 
+<h3> merge()</h3>
+<ul>
+  @for (val of mergedValues; track $index) {
+    <li>{{ val }}</li>
+  }
+</ul>
 
-<h3>fromEvent</h3>
-<button #btn>click </button>
-   
+<h3> combineLatest()</h3>
+<ul>
+  @for (val of combinedValues; track $index) {
+    <li>{{ val | json }}</li>
+  }
+</ul>
+
+<h3> forkJoin()</h3>
+<ul>
+  @for (val of forkJoinValues; track $index) {
+    <li>{{ val | json }}</li>
+  }
+</ul>
+
+<h3> switchMap + withLatestFrom</h3>
+<ul>
+  @for (val of latestValues; track $index) {
+    <li>{{ val | json }}</li>
+  }
+</ul>
+<h3> fromEvent</h3>
+<button #btn>Click</button>
+<p>Click Count: {{ clickCount }}</p>
+
